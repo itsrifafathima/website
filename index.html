@@ -8,57 +8,8 @@
         <body style="text-align: center;">
     <!-- Your content goes here -->
 </body>
-         .shooting-star {
-            position: absolute; /* Position the shooting star absolutely */
-            width: 2px; /* Width of the star tail */
-            height: 100px; /* Height of the star tail */
-            background: linear-gradient(to right, white, rgba(255, 255, 255, 0)); /* White tail fading to transparent */
-            border-radius: 2px; /* Rounded edges */
-            animation: shoot 1s ease-in-out; /* Shooting effect */
-        }
 
-        @keyframes shoot {
-            0% {
-                transform: translate(0, 0) rotate(0deg); /* Starting position */
-            }
-            100% {
-                transform: translate(100vw, -100vh) rotate(30deg); /* Moves to the top right corner */
-                opacity: 0; /* Fades out */
-            }
-        }
-    </style>
-</head>
-<body>
-    <script>
-        // Function to create a shooting star
-        function createShootingStar() {
-            const star = document.createElement('div');
-            star.classList.add('shooting-star');
-
-            // Random starting position for the shooting star
-            star.style.left = Math.random() * 100 + 'vw';
-            star.style.top = Math.random() * 100 + 'vh';
-
-            // Append star to the body
-            document.body.appendChild(star);
-
-            // Remove star after animation ends
-            star.addEventListener('animationend', () => {
-                star.remove();
-            });
-        }
-
-        // Create a shooting star every 1 second
-        setInterval(createShootingStar, 1000);
-    </script>
-    
-    
-
-
-</body>
-
-        }
-    </style>
+  </style>
     <h1 style="color: #D13F79;">My Journey into Tech</h1>
     ❤️ ❤️ ❤️ <!-- Adds a red heart emoji -->
 
