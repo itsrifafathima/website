@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Journey into Tech</title>
     <style>
-        body {
-            text-align: center; /* Centers all text on the page */
-            <body style="background-color: skyblue;">
+        <body style="text-align: center;">
     <!-- Your content goes here -->
-            <body style="background-color: skyblue;">
-</body> bg colour="sky blue">
+</body>
+    
+
 
 </body>
 
@@ -21,12 +20,48 @@
 
 </head>
 <body>
+        .star {
+            position: absolute; /* Position stars absolutely */
+            width: 2px; /* Width of the star */
+            height: 2px; /* Height of the star */
+            background-color: white; /* Star color */
+            border-radius: 50%; /* Makes the star round */
+            animation: twinkle 1.5s infinite; /* Star twinkle effect */
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5; /* Fading opacity */
+            }
+            50% {
+                opacity: 1; /* Fully visible */
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Create 100 stars
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+
+            // Randomly position the stars
+            star.style.left = Math.random() * window.innerWidth + 'px';
+            star.style.top = Math.random() * window.innerHeight + 'px';
+
+            // Append star to the body
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
     
     <p><span style="color: green;">I started coding when I was 10 years</span> old.</p>
     <p><span style="color: blue;">I love coding because it's like solving puzzles.</span></p> 
     <p><span style="color: yellow;">It helps things build creatively.</span></p>
-    <p><span style="color: dark purple;">Coding is the digital world.</p>
-    <p><span style="color: orange;"Having fun and learning more.</p>
+    <p><span style="color: orange;">Coding is the digital world.</p>
+    <p><span style="color: orange; Having fun and learning more.</p>
     <p>Thank you!!!</p>
 </body>
 </html>
